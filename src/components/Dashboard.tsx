@@ -20,7 +20,7 @@ const Dashboard = () => {
   }
 
   if (isInitialized && !session) {
-    return router.replace("/")
+    router.push("/")
   }
 
   return (
