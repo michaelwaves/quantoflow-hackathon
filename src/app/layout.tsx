@@ -1,5 +1,4 @@
-'use client';
-
+"use client"
 import './globals.css';
 import './layout.css';
 
@@ -11,21 +10,23 @@ import { useRouter } from 'next/navigation';
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
-    <StytchProvider>
-      <html lang="en">
-        <title>Stytch Next.js App Router Example</title>
-        <meta
-          name="description"
-          content="An example Next.js App Router application using Stytch for authentication"
-        />
+
+    <html lang="en">
+      <title>Quantoflow Hackathon App</title>
+      <meta
+        name="description"
+        content="An anti money laundering platform"
+      />
+      <StytchProvider>
         <body>
           <div className="page-container">
             <SideNav />
             <main className="content-container">{children}</main>
           </div>
         </body>
-      </html>
-    </StytchProvider>
+      </StytchProvider>
+    </html>
+
   );
 }
 

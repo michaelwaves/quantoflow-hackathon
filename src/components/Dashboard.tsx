@@ -1,3 +1,4 @@
+"use client"
 import { useMemo } from 'react';
 import { useRouter } from 'next/navigation';
 import {
@@ -5,6 +6,9 @@ import {
   useStytchOrganization,
 } from '@stytch/nextjs/b2b';
 import './Dashboard.css';
+import Link from 'next/link';
+import { buttonVariants } from './ui/button';
+buttonVariants
 
 const Dashboard = () => {
   const { session, isInitialized } = useStytchMemberSession();
@@ -30,9 +34,12 @@ const Dashboard = () => {
         <strong>{organization?.organization_name}</strong> with{' '}
         <strong>{role}</strong> permissions.
         <br></br>
-        <br></br>
-        Test out the <strong>Admin Portal UI</strong> for managing members, settings, SSO and SCIM.
+        Please upload your data to catch Money Launderers 💸
+        <Link
+          className={buttonVariants({ variant: "default" })}
+          href="/upload/entities"> Upload Center</Link>
       </div>
+
     </div>
   );
 };

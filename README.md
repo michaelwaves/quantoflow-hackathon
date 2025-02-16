@@ -68,3 +68,17 @@ This example app showcases a small portion of what you can accomplish with Stytc
 # :question: Need support?
 
 Come join our [Slack community](https://stytch.com/docs/resources/support/overview) to speak directly with a Stytch auth expert!
+
+## Introspect db:
+We're using drizzle orm
+- Step 1: Install drizzle
+```bash
+npm i drizzle-orm pg dotenv
+npm i -D drizzle-kit tsx @types/pg
+```
+- Step 2: connect DATABASE_URL in .env file
+- STEP 3: src/db/index.ts
+- STEP 4: introspect database with 
+``` bash
+npx drizzle-kit pull
+```

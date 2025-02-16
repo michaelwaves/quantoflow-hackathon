@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 .page-container {
   display: flex;
   flex-direction: row;
@@ -29,6 +33,7 @@
   color: black;
   display: block;
 }
+
 .sidebar a:hover {
   font-weight: bold;
 }
